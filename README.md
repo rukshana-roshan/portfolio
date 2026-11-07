@@ -1,21 +1,21 @@
-# 🌐 Developer-Portfolio Website
+# 🌐 Cinematic Developer Portfolio
 
 A modern, responsive personal cinematic portfolio website built to showcase my skills, projects, and contact information as a Full-Stack Developer.
 
 ---
 
 ## 🔗 Live Demo
-👉 https://rukshana-roshan.github.io/Developer-Portfolio/
+👉 https://rukshana-roshan.github.io/portfolio/
 
 ---
 
 ## ✨ Features
 
 - Fully responsive design (mobile, tablet, desktop)
-- Film-reel cinematic aesthetic inspired by developer reels
+- Film-reel cinematic aesthetic inspired by modern developer reels
 - Smooth scrolling navigation & horizontal project reel
-- About section with personal introduction
-- Production Systems & App Development architecture breakdown
+- About section with personal introduction and full-body portrait
+- Production Systems & App Development architecture breakdown (LankaEase)
 - HackerRank verified certifications showcase with 4K lightbox inspection
 - Interactive contact form with auto-mailer integration
 
@@ -31,7 +31,7 @@ A modern, responsive personal cinematic portfolio website built to showcase my s
 
 ## 📁 Folder Structure
 
-Developer-Portfolio/
+portfolio/
 │── index.html
 │── reel.css
 │── reel.js
@@ -52,7 +52,7 @@ This project was built to:
 Rukshana Roshan
 
 - **GitHub**: https://github.com/rukshana-roshan
-- **Portfolio**: https://rukshana-roshan.github.io/Developer-Portfolio/
+- **Portfolio**: https://rukshana-roshan.github.io/portfolio/
 - **LinkedIn**: https://www.linkedin.com/in/rukshana-roshan/
 - **Email**: rukshanaroshan.it@gmail.com
 
@@ -61,7 +61,7 @@ Rukshana Roshan
 ## 🚀 How to Run Locally
 
 ```bash
-git clone https://github.com/rukshana-roshan/Developer-Portfolio.git
-cd Developer-Portfolio
+git clone https://github.com/rukshana-roshan/portfolio.git
+cd portfolio
 open index.html
 ```

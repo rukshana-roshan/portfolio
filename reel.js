@@ -277,33 +277,10 @@ function initContactForm() {
   });
 }
 
-// 9. GSAP & Lenis Cinematic Timelines
+// 9. GSAP Cinematic Entrance Timelines (Natural Native Scrolling)
 function initCinematicAnimations() {
-  // Lenis Smooth Scroll Initialization if loaded
-  if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1.05
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-  }
-
-  // GSAP Entrance & ScrollTrigger if loaded
+  // GSAP Entrance & Stagger if loaded (no scroll hijacking)
   if (typeof gsap !== 'undefined') {
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-    }
-
-    // Hero Staggered Entrance
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     heroTl
       .from('.hero-eyebrow', { opacity: 0, y: -20, duration: 0.8, delay: 0.2 })
@@ -314,13 +291,24 @@ function initCinematicAnimations() {
       .from('.floating-tech-badge', { opacity: 0, scale: 0.7, stagger: 0.12, duration: 0.7 }, '-=0.5')
       .from('.hero-scroll-indicator', { opacity: 0, y: -10, duration: 0.8 }, '-=0.3');
   }
+
+  // Easy horizontal scrolling on filmstrip when hovering with mouse wheel
+  const strip = document.getElementById('filmstripTrack');
+  if (strip) {
+    strip.addEventListener('wheel', (e) => {
+      // If user is actively wheeling horizontally or holding shift, scroll smoothly
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+        strip.scrollLeft += e.deltaX;
+      }
+    }, { passive: true });
+  }
 }
 
-// 10. Horizontal Filmstrip Reel Scrolling
+// 10. Horizontal Filmstrip Reel Scrolling Buttons
 function scrollReel(direction) {
   const strip = document.getElementById('filmstripTrack');
   if (strip) {
-    strip.scrollBy({ left: direction * strip.clientWidth * 0.75, behavior: 'smooth' });
+    strip.scrollBy({ left: direction * (strip.clientWidth * 0.75), behavior: 'smooth' });
   }
 }
 

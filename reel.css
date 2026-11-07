@@ -730,4 +730,28 @@
   box-shadow: 0 4px 15px rgba(0, 240, 255, 0.2);
 }
 
+/* Easy & Natural Native Scrolling System */
+html {
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 5rem !important;
+  overflow-y: auto !important;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+section[id], header[id] {
+  scroll-margin-top: 5rem !important;
+}
+
+/* Effortless Filmstrip Scrolling */
+.filmstrip {
+  -webkit-overflow-scrolling: touch !important;
+  scroll-behavior: smooth !important;
+  scroll-snap-type: none !important;
+}
+
+
 

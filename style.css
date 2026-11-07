@@ -103,6 +103,7 @@ section{padding:100px 5%}
 .project-techs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
 .tech-chip{padding:3px 10px;background:rgba(232,108,255,.08);border:1px solid rgba(232,108,255,.2);color:var(--accent2);border-radius:4px;font-size:.75rem;font-weight:600}
 .project-link{display:inline-flex;align-items:center;gap:6px;color:var(--accent);text-decoration:none;font-size:.88rem;font-weight:500;transition:gap .2s}
+.project-links{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto}
 .project-link:hover{gap:10px}
 
 /* CERTIFICATIONS */

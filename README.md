@@ -1,78 +1,67 @@
-# 🌐 Developer Portfolio Website
+# 🌐 Developer-Portfolio Website
 
-A modern, responsive personal portfolio website built to showcase my skills, projects, and contact information as a Full-Stack Developer.
+A modern, responsive personal cinematic portfolio website built to showcase my skills, projects, and contact information as a Full-Stack Developer.
 
 ---
 
 ## 🔗 Live Demo
-👉 https://rukshana-roshan.github.io/developer-portfolio/
+👉 https://rukshana-roshan.github.io/Developer-Portfolio/
 
 ---
 
 ## ✨ Features
 
 - Fully responsive design (mobile, tablet, desktop)
-- Clean and modern UI
-- Smooth scrolling navigation
+- Film-reel cinematic aesthetic inspired by developer reels
+- Smooth scrolling navigation & horizontal project reel
 - About section with personal introduction
-- Projects showcase section
-- Contact information section
-- Social media links integration
+- Production Systems & App Development architecture breakdown
+- HackerRank verified certifications showcase with 4K lightbox inspection
+- Interactive contact form with auto-mailer integration
 
 ---
 
 ## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML5 & CSS3 (Custom Cinematic Tailwind v4 styling)
+- JavaScript (Interactive 3D tilt, scroll reveals, lightbox modals)
+- Modern Typography (Bodoni Moda, JetBrains Mono, Manrope)
 
 ---
 
 ## 📁 Folder Structure
 
-developer-portfolio/
+Developer-Portfolio/
 │── index.html
-│── style.css
-│── script.js
-│── /screenshots
-│ ├── home.png
-│ ├── about.png
-│ ├── projects.png
-│ └── contact.png
-
+│── reel.css
+│── reel.js
+│── project-images/
+│── Certificates/
 
 ---
 
-🎯 Purpose of This Project
+## 🎯 Purpose of This Project
 
 This project was built to:
+- Showcase full-stack engineering skills to recruiters and teams
+- Present architecture workflows (such as LankaEase) in high visual fidelity
+- Maintain verified HackerRank and academic credentials in one place
 
-Practice frontend development skills
-Build a personal branding portfolio
-Showcase projects to recruiters
-Improve responsive web design skills
-👨‍💻 Author
+## 👨‍💻 Author
 
 Rukshana Roshan
 
-GitHub: https://github.com/rukshana-roshan
+- **GitHub**: https://github.com/rukshana-roshan
+- **Portfolio**: https://rukshana-roshan.github.io/Developer-Portfolio/
+- **LinkedIn**: https://www.linkedin.com/in/rukshana-roshan/
+- **Email**: rukshanaroshan.it@gmail.com
 
-Portfolio: https://rukshana-roshan.github.io/developer-portfolio/
-
-LinkedIn: www.linkedin.com/in/rukshana-roshan
-
-Email: rukshanaroshan.it@gmail.com
-
-⭐ Future Improvements
-Add React version of portfolio
-Add animations and transitions
-Improve UI/UX design
-Add backend contact form
+---
 
 ## 🚀 How to Run Locally
 
 ```bash
-git clone https://github.com/rukshana-roshan/developer-portfolio.git
-cd developer-portfolio
+git clone https://github.com/rukshana-roshan/Developer-Portfolio.git
+cd Developer-Portfolio
 open index.html
+```

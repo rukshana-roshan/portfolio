@@ -14,8 +14,36 @@ function closeCertModal(){
 // Hamburger
 const hamburger=document.getElementById('hamburger');
 const navLinks=document.getElementById('navLinks');
-hamburger.addEventListener('click',()=>navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+function setMenu(open){
+  navLinks.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  hamburger.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+}
+hamburger.addEventListener('click',()=>setMenu(!navLinks.classList.contains('open')));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown', e=>{if(e.key==='Escape')setMenu(false)});
+
+// Match the device theme until a visitor chooses their own preference.
+const themeToggle = document.getElementById('themeToggle');
+const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+let hasThemePreference = false;
+try { hasThemePreference = ['light','dark'].includes(localStorage.getItem('portfolio-theme')); } catch(e) {}
+function applyTheme(theme){
+  document.documentElement.dataset.theme = theme;
+  const dark = theme === 'dark';
+  themeToggle.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+  themeToggle.querySelector('.theme-label').textContent = dark ? 'Light mode' : 'Dark mode';
+  themeToggle.setAttribute('aria-label', 'Switch to ' + (dark ? 'light' : 'dark') + ' mode');
+  themeToggle.setAttribute('aria-pressed', String(dark));
+}
+applyTheme(document.documentElement.dataset.theme);
+themeToggle.addEventListener('click', ()=>{
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  applyTheme(theme);
+  hasThemePreference = true;
+  try { localStorage.setItem('portfolio-theme', theme); } catch(e) {}
+});
+systemTheme.addEventListener('change', e=>{if(!hasThemePreference)applyTheme(e.matches ? 'dark' : 'light')});
 
 // Fade in on scroll
 const observer=new IntersectionObserver(entries=>{
